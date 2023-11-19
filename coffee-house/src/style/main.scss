@@ -1,4 +1,24 @@
-@font-face {
-  font-family: 'Inter';
-  src: url(./../assets/fonts/Inter-Medium.ttf) format('ttf');
-}
+// DEPENDENCIES
+@import '~normalize.css/normalize';
+
+// ABSTRACTS
+@import './abstracts/variables';
+
+// BASE
+@import './base/fonts';
+
+// COMPONENTS
+@import './components/btn-appstore';
+@import './components/btn-googleplay';
+@import './components/btn-primary';
+@import './components/btn-secondary';
+@import './components/menu-item';
+@import './components/tab-item';
+
+// LAYOUT
+@import './layout/header';
+@import './layout/footer';
+
+// PAGES
+@import './pages/home';
+@import './pages/menu'
