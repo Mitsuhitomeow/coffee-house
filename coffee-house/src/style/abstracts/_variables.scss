@@ -13,11 +13,32 @@ $border-light: #C1B6AD;
 $border-dark: #665F55;
 
 // mixins
-// heading
-@mixin heading-1 {
+// heading [mobile]
+@mixin heading-mobile-1 {
   font-size: 42px;
   font-weight: 600;
   line-height: 115%;
+}
+
+@mixin heading-mobile-1-accent {
+  font-style: italic;
+}
+
+@mixin heading-mobile-2 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 115%;
+}
+
+@mixin heading-mobile-2-accent {
+  font-style: italic;
+}
+
+// heading
+@mixin heading-1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
 }
 
 @mixin heading-1-accent {
@@ -25,9 +46,9 @@ $border-dark: #665F55;
 }
 
 @mixin heading-2 {
-  font-size: 42px;
+  font-size: 60px;
   font-weight: 600;
-  line-height: 115%;
+  line-height: 125%;
 }
 
 @mixin heading-2-accent {

@@ -6,19 +6,11 @@
 
 // BASE
 @import './base/fonts';
+@import './base/start-style';
 
 // COMPONENTS
-@import './components/btn-appstore';
-@import './components/btn-googleplay';
-@import './components/btn-primary';
-@import './components/btn-secondary';
+@import './components/logo';
 @import './components/menu-item';
-@import './components/tab-item';
 
 // LAYOUT
 @import './layout/header';
-@import './layout/footer';
-
-// PAGES
-@import './pages/home';
-@import './pages/menu'
