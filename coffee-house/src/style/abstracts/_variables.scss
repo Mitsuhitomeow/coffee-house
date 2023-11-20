@@ -62,13 +62,13 @@ $border-dark: #665F55;
 }
 
 // body
-@mixin medium {
+@mixin body-medium {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
 }
 
-@mixin caption {
+@mixin body-caption {
   font-size: 10px;
   font-weight: 600;
   line-height: 140%;
