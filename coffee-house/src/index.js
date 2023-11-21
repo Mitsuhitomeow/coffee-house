@@ -1,5 +1,11 @@
 import './index.html';
 import './style/main.scss';
+import data from './scripts/database/products.json'
+import enjoyBackgroundImage from './scripts/enjoyBg';
+import { showImage } from './scripts/sliderApp';
 
-console.log('Helloвывывы');
-console.log(sum(1, 2))
+console.log(data)
+
+
+enjoyBackgroundImage()
+showImage()

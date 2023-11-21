@@ -18,7 +18,7 @@ module.exports = (env) => {
       clean: true,
       assetModuleFilename: 'assets/[name][ext]'
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     devServer: isDev
       ? {
         port: 3001,
@@ -75,10 +75,21 @@ module.exports = (env) => {
           }
         },
         {
-          test: /\.(png|jpg|gif)$/i,
+          test: /\.png$/i,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: 'assets/images/[name].[ext]',
+              }
+            },
+          ]
+        },
+        {
+          test: /\.json$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'assets/image/[name][ext]'
+            filename: 'script/[name][ext]'
           }
         },
         {
