@@ -16,7 +16,7 @@ module.exports = (env) => {
       path: path.resolve(__dirname, 'build'),
       filename: '[name].[contenthash].js',
       clean: true,
-      assetModuleFilename: 'assets/[name][ext]'
+      assetModuleFilename: 'assets/img/[name][ext]'
     },
     devtool: 'source-map',
     devServer: isDev
@@ -76,20 +76,13 @@ module.exports = (env) => {
         },
         {
           test: /\.png$/i,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: 'assets/images/[name].[ext]',
-              }
-            },
-          ]
+          type: 'asset/resource'
         },
         {
           test: /\.json$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'script/[name][ext]'
+            filename: 'scripts/[name][ext]'
           }
         },
         {

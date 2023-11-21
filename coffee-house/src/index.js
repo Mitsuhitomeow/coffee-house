@@ -1,11 +1,25 @@
 import './index.html';
 import './style/main.scss';
-import data from './scripts/database/products.json'
-import enjoyBackgroundImage from './scripts/enjoyBg';
+import url from './scripts/database/products.json'
 import { showImage } from './scripts/sliderApp';
 
-console.log(data)
 
+async function fetchData() {
+  try {
+    const response = await fetch(url);
 
-enjoyBackgroundImage()
-showImage()
+    if (!response.ok) {
+      throw new Error('ошибка при загрузке')
+    }
+
+    const data = await response.json()
+
+    showImage(data)
+
+  } catch (error) {
+    console.error('failed 404', error.message)
+    throw error
+  }
+}
+
+fetchData()
