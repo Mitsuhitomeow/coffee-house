@@ -14,7 +14,7 @@
       }
     }
 
-    button {
+    .button {
 
       cursor: pointer;
       background: $background-body;
@@ -62,7 +62,7 @@
 @media (hover:hover) {
   .mobile-app {
 
-    button:hover {
+    .button:hover {
       background: $background-container;
       transition: all .5s ease;
 

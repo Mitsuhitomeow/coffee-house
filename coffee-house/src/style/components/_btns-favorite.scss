@@ -5,6 +5,14 @@
     .slider-btn {
       cursor: pointer;
       transition: all .3s ease;
+
+      svg {
+        transition: all .3s ease;
+
+        path {
+          transition: all .3s ease;
+        }
+      }
     }
   }
 }
@@ -15,11 +23,9 @@
 
     svg {
       fill: $background-container;
-      transition: all .3s ease;
 
       path {
         stroke: $text-light;
-        transition: all .3s ease;
       }
     }
   }
@@ -27,22 +33,20 @@
   .slider__btn-right:hover {
 
     transform: translateY(-5%);
-    transition: all .3s ease;
-  }
-
-  .slider__btn-right:active {
-
-    transform: translateY(0);
   }
 
   .slider__btn-left:hover {
 
     transform: translateY(5%);
-    transition: all .3s ease;
   }
+}
 
-  .slider__btn-left:active {
+.slider__btn-right:active {
 
-    transform: translateY(0);
-  }
+  transform: translateY(0);
+}
+
+.slider__btn-left:active {
+
+  transform: translateY(0);
 }
