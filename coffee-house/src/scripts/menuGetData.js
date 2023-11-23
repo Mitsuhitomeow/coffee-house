@@ -1,3 +1,4 @@
+import { showCard } from './coffeeCards';
 import url from './database/products.json'
 
 export async function fetchData() {
@@ -9,7 +10,7 @@ export async function fetchData() {
     }
 
     const data = await response.json()
-    console.log(data)
+    showCard(data)
   } catch (error) {
     console.error('failed 404', error.message)
     throw error
