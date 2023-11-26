@@ -19,6 +19,7 @@
           @include heading-2;
           color: $text-light;
           letter-spacing: 0.02rem;
+
           span {
             @include heading-2-accent;
             color: $text-accent;
@@ -32,6 +33,7 @@
     }
 
     .footer__content-right {
+      min-width: 265px;
 
       .footer__contacts-title {
         margin-bottom: 40px;
@@ -39,6 +41,29 @@
         h3 {
           @include heading-3;
           color: $text-light;
+        }
+      }
+    }
+
+    @media screen and (max-width:1140px) {
+      .footer__content-left {
+        margin-right: 10%;
+      }
+
+      @media screen and (max-width:1124px) {
+        padding: 100px 60px 90px 60px;
+        flex-direction: column;
+        align-items: start;
+
+        .footer__content-left {
+          margin-bottom: 94px;
+          margin-right: 0;
+        }
+
+        .footer__content-right {
+          .footer__contacts-title {
+            margin-bottom: 40px;
+          }
         }
       }
     }
