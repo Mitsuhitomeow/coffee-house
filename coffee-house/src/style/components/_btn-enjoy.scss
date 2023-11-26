@@ -23,14 +23,24 @@
         color: $text-dark;
         transform: translateX(29%);
         transition: all .5s ease;
+
+        @media screen and (max-width:768px) {
+        transform: translateX(0);
+        }
       }
 
       svg {
         opacity: 0;
-        margin-left: 4px;
+        margin-left: 8px;
         animation: btn-opacity-0 .3s ease;
+
+        @media screen and (max-width:768px) {
+          opacity: 1;
+        }
       }
     }
+
+
   }
 }
 
@@ -53,9 +63,11 @@
   0% {
     opacity: 0%;
   }
+
   50% {
     opacity: 50%;
   }
+
   100% {
     opacity: 100%;
   }
@@ -65,9 +77,11 @@
   0% {
     opacity: 100%;
   }
+
   50% {
     opacity: 50%;
   }
+
   100% {
     opacity: 0%;
   }
