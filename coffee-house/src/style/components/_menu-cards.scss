@@ -2,9 +2,12 @@
   .menu__content-menu {
     display: grid;
     grid-template-columns: repeat(4, 310px);
-    gap: 4% 3%;
+    column-gap: 2.96%;
 
     .menu__card {
+      // display: flex;
+      // flex-direction: column;
+
       min-height: 100%;
       max-width: 310px;
       border: 1px solid $border-light;
@@ -61,11 +64,24 @@
       .menu__card-price {
         position: absolute;
         bottom: 20px;
+
         p {
           @include heading-3;
           color: $text-dark;
         }
       }
+    }
+
+    @media screen and (max-width:1425px) {
+      justify-content: center;
+      grid-template-columns: repeat(3, 310px);
+      grid-auto-rows: minmax(545px, auto);
+      column-gap: 5.8%;
+    }
+
+    @media screen and (max-width:1050px) {
+
+      grid-template-columns: repeat(2, 310px);
     }
   }
 }

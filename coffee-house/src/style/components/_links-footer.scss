@@ -17,7 +17,15 @@
 
             svg {
               margin-right: 8px;
+
+              @media screen and (max-width:1124px) {
+                margin-right: 4px;
+              }
             }
+          }
+
+          @media screen and (max-width:1124px) {
+            margin-bottom: 18px;
           }
 
           a:before {
@@ -45,10 +53,6 @@
 
           svg {
             margin-right: 8px;
-
-            @media screen and (max-width:1124px) {
-              margin-right: 5px;
-            }
           }
         }
       }

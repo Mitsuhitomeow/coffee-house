@@ -1,5 +1,9 @@
 .menu {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
+
+  @media screen and (max-width:1425px) {
+    margin-bottom: 100px;
+  }
 
   .menu__content {
     .menu__content-title {

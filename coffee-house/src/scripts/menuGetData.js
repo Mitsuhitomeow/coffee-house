@@ -10,7 +10,9 @@ export async function fetchData() {
     }
 
     const data = await response.json()
+
     showCard(data)
+
   } catch (error) {
     console.error('failed 404', error.message)
     throw error

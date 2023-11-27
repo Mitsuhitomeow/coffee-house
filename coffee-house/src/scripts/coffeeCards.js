@@ -23,39 +23,51 @@ export function showCard(data) {
   const cardItem = data.products;
   const card = document.querySelector('.menu__content-menu');
   const coffeeCards = cardItem.filter(element => element.category === 'coffee');
+  const SCREEN_WIDTH = window.innerWidth;
+
+  card.innerHTML = '';
 
   for (let i = 0; i < Math.min(arrCoffee.length); i += 1) {
     coffeeCards[i].image = arrCoffee[i]
   }
 
-  coffeeCards.forEach(element => {
+  const maxVisibleCards =
+    SCREEN_WIDTH <= 1425 && SCREEN_WIDTH >= 1050
+      ? 6
+      : SCREEN_WIDTH < 1050
+        ? 4
+        : coffeeCards.length;
+
+  const visibleCards = coffeeCards.slice(0, maxVisibleCards);
+
+  visibleCards.forEach(element => {
     const menuCard = document.createElement('div');
     menuCard.classList.add('.menu__card');
+    menuCard.style = 'margin-bottom: 40px'
 
     menuCard.innerHTML = `
-      <div class="menu__card">
-        <div class="menu__card-image">
-          <img src="${element.image}" alt="${element.name}">
-        </div>
-        <div class="menu__card-description">
-          <div class="menu__title-subtitle">
-            <div class="menu__card-title">
-              <h3>${element.name}</h3>
+        <div class="menu__card">
+          <div class="card__content">
+            <div class="menu__card-image">
+              <img src="${element.image}" alt="${element.name}">
             </div>
-            <div class="menu__card-subtitle">
-              <p>${element.description}</p>
+            <div class="menu__card-description">
+              <div class="menu__title-subtitle">
+                <div class="menu__card-title">
+                  <h3>${element.name}</h3>
+                </div>
+                <div class="menu__card-subtitle">
+                  <p>${element.description}</p>
+                </div>
+              </div>
+              <div class="menu__card-price">
+                <p>${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol' }).format(element.price)}</p>
+              </div>
             </div>
           </div>
-          <div class="menu__card-price">
-            <p>${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol' }).format(element.price)}</p>
-          </div>
         </div>
-      </div>
-    `
+      `
 
     card.appendChild(menuCard);
   });
 }
-
-
-
