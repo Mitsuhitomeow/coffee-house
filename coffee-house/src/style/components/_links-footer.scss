@@ -44,7 +44,11 @@
           margin-bottom: 10px;
 
           svg {
-            margin-right: 8px
+            margin-right: 8px;
+
+            @media screen and (max-width:1124px) {
+              margin-right: 5px;
+            }
           }
         }
       }
