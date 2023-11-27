@@ -39,9 +39,9 @@
 
     .header__nav {
       position: absolute;
-      right: -380px;
+      transform: translateX(100%);
       top: 0;
-      width: 380px;
+      width: 100%;
       background: $background-body;
       height: 1000%;
       margin: 0;
