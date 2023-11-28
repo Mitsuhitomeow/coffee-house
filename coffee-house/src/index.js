@@ -3,8 +3,8 @@ import './style/main.scss';
 import url from './scripts/database/products.json'
 import { showImage } from './scripts/sliderApp';
 import { showLoader } from './scripts/loaderScreen';
-import { downloadAppStore } from './scripts/downloadAppStore';
-import { downloadGooglePlay } from './scripts/downloadGooglePlay';
+import { downloadAppStore } from './scripts/btn/downloadAppStore';
+import { downloadGooglePlay } from './scripts/btn/downloadGooglePlay';
 
 showLoader()
 
