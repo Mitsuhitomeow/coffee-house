@@ -47,6 +47,8 @@ header {
   }
 
   #link-active:before {
+    transform: scaleX(1.1);
+
     @media screen and (max-width: 768px) {
       transform: scaleX(0);
     }
