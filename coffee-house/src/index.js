@@ -2,7 +2,9 @@ import './index.html';
 import './style/main.scss';
 import url from './scripts/database/products.json'
 import { showImage } from './scripts/sliderApp';
+import { showLoader } from './scripts/loaderScreen';
 
+showLoader()
 
 async function fetchData() {
   try {
