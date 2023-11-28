@@ -1,11 +1,16 @@
 .enjoy {
-  border-radius: 2.5rem;
-  background-image: url(./../assets/img/img-hero.png);
-  background-position: center;
-  background-size: cover;
-
   width: 100%;
   height: 40.25rem;
+  position: relative;
+
+  video {
+    border-radius: 2.5rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
 
   .enjoy__content {
     width: 33.125rem;
