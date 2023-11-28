@@ -25,6 +25,14 @@
             color: $text-accent;
           }
         }
+
+        @media screen and (max-width:700px) {
+          h2 {
+            @include heading-mobile-2;
+            font-size: 31px;
+            letter-spacing: 0.035rem;
+          }
+        }
       }
 
       .footer__content-web {
@@ -65,7 +73,18 @@
             margin-bottom: 37px;
           }
         }
+
+        @media screen and (max-width:530px) {
+
+          .footer__content-left {
+            margin-bottom: 38px;
+          }
+        }
       }
+    }
+
+    @media screen and (max-width:530px) {
+      padding: 60px 16px 56px 16px;
     }
   }
 }
