@@ -1,10 +1,6 @@
 .menu {
   margin-bottom: 60px;
 
-  @media screen and (max-width:1425px) {
-    margin-bottom: 100px;
-  }
-
   .menu__content {
     .menu__content-title {
       text-align: center;
@@ -20,6 +16,20 @@
           color: $text-accent;
         }
       }
+
+      @media screen and (max-width:730px) {
+        h1 {
+          @include heading-mobile-2;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:1425px) {
+    margin-bottom: 100px;
+
+    @media screen and (max-width:500px) {
+      margin-bottom: 104px;
     }
   }
 }

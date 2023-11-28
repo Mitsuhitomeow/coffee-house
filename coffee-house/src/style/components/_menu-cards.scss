@@ -80,8 +80,11 @@
     }
 
     @media screen and (max-width:1050px) {
-
       grid-template-columns: repeat(2, 310px);
+    }
+
+    @media screen and (max-width:730px) {
+      grid-template-columns: repeat(1, 310px);
     }
   }
 }
