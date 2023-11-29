@@ -8,6 +8,10 @@ header {
   nav {
     flex-basis: 39.5%;
     margin: 15px;
+
+    @media screen and (max-width: 1050px) {
+      flex-basis: 52.5%;
+    }
   }
 
   ul {
@@ -42,8 +46,12 @@ header {
     cursor: default;
   }
 
-  #link-active:before{
+  #link-active:before {
     transform: scaleX(1.1);
+
+    @media screen and (max-width: 768px) {
+      transform: scaleX(0);
+    }
   }
 
   .header__menu-link {

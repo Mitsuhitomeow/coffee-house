@@ -9,8 +9,9 @@ export async function fetchData() {
       throw new Error('ошибка при загрузке');
     }
 
-    const data = await response.json();
-    showCard(data);
+    const data = await response.json()
+
+    showCard(data)
   } catch (error) {
     console.error('failed 404', error.message);
     throw error;

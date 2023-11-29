@@ -93,6 +93,13 @@ module.exports = (env) => {
           }
         },
         {
+          test: /\.mp4$/i,
+          type: 'asset/resource',
+          generator: {
+            filename: 'assets/video/[name][ext]'
+          }
+        },
+        {
           test: /\.(?:js|mjs|cjs)$/,
           exclude: /node_modules/,
           use: {

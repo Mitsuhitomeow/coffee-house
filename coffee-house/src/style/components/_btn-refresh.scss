@@ -1,0 +1,19 @@
+.menu {
+  .menu__content-refresh {
+    display: flex;
+    justify-content: center;
+    display: none;
+
+
+    button {
+      background: $background-body;
+      padding: 17px 16px 14px 18px;
+      border-radius: 50%;
+      border: 1px solid $text-dark;
+    }
+
+    @media screen and (max-width:1425px) {
+      display: flex;
+    }
+  }
+}

@@ -8,9 +8,15 @@
   <link rel="icon" href="./assets/icon/coffee-cup.svg">
   <title>Coffee | Home</title>
 </head>
-
 <body>
-  <div class="container">
+  <section class="loader">
+    <div class="loader__image">
+      <img src="./assets/icon/logo.svg" alt="">
+    </div>
+    <p>2023Q4 – Stage 1</p>
+    <div class="loader__circle"></div>
+  </section>
+  <div class="container__home">
     <header class="header">
       <div class="header__logo-svg logo">
         <a href="#">
@@ -31,9 +37,13 @@
           <img src="./assets/icon/coffee-cup.svg" alt="">
         </a>
       </div>
+      <div class="header__burger-btn">
+        <span></span><span></span>
+      </div>
     </header>
     <main class="main">
       <section id="enjoy" class="enjoy">
+        <video src="./assets/video/video (540p).mp4" autoplay muted loop playsinline></video>
         <div class="enjoy__content">
           <h1 class="enjoy__content-title">
             <span>Enjoy</span> premium coffee at our charming cafe
@@ -199,7 +209,6 @@
                 </svg>
               </a>
             </div>
-            <div class="footer__web-instagram">
               <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="#665F55"
                   xmlns="http://www.w3.org/2000/svg">
