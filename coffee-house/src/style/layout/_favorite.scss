@@ -15,7 +15,7 @@
         color: $text-accent;
       }
 
-      @media screen and (max-width:500px) {
+      @media screen and (max-width:550px) {
         @include heading-mobile-2;
 
         span {
@@ -68,7 +68,7 @@
         justify-content: center;
       }
 
-      @media screen and (max-width:500px) {
+      @media screen and (max-width:550px) {
         .slider__item {
           img {
             width: 348px;
@@ -95,10 +95,6 @@
         margin-right: 6px;
 
         background: $border-light;
-      }
-
-      .panel__control.active {
-        background: $border-dark;
       }
     }
   }
