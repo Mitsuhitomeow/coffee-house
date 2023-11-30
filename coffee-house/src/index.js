@@ -5,6 +5,7 @@ import { sliderApp } from './scripts/slider/sliderApp';
 import { showLoader } from './scripts/loaderScreen';
 import { downloadAppStore } from './scripts/btn/downloadAppStore';
 import { downloadGooglePlay } from './scripts/btn/downloadGooglePlay';
+import { btnBurgerMenu } from './scripts/burger/burgerMenuApp';
 
 showLoader()
 
@@ -28,5 +29,6 @@ async function fetchData() {
 
 fetchData()
 
+btnBurgerMenu()
 downloadAppStore()
 downloadGooglePlay()
