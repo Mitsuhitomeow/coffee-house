@@ -1,7 +1,7 @@
 import './index.html';
 import './style/main.scss';
 import url from './scripts/database/products.json'
-import { showImage } from './scripts/sliderApp';
+import { sliderApp } from './scripts/slider/sliderApp';
 import { showLoader } from './scripts/loaderScreen';
 import { downloadAppStore } from './scripts/btn/downloadAppStore';
 import { downloadGooglePlay } from './scripts/btn/downloadGooglePlay';
@@ -18,7 +18,7 @@ async function fetchData() {
 
     const data = await response.json()
 
-    showImage(data)
+    sliderApp(data)
 
   } catch (error) {
     console.error('failed 404', error.message)

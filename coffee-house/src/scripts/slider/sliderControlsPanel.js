@@ -1,6 +1,7 @@
 export function controlPanel (data) {
   const CONTROLS = document.querySelectorAll('.load');
-  const id = data.favorite[1].id;
+  const coffee = data.favorite;
+  const id = coffee[1].id;
 
   CONTROLS.forEach((element, index) => {
     if (index + 1 === id) {
