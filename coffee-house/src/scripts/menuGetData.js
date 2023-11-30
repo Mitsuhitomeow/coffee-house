@@ -1,5 +1,5 @@
-import { showCard } from './coffeeCards';
 import url from './database/products.json';
+import { filterMenuApp } from './filterProducts/btnsFilter';
 
 export async function fetchData() {
   try {
@@ -10,8 +10,8 @@ export async function fetchData() {
     }
 
     const data = await response.json()
+    filterMenuApp(data)
 
-    showCard(data)
   } catch (error) {
     console.error('failed 404', error.message);
     throw error;
