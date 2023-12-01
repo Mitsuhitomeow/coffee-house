@@ -1,8 +1,8 @@
-import { createRefreshButton } from "../btn/refreshProduct";
-import tea1 from "./../../assets/img/tea-1.png"
-import tea2 from "./../../assets/img/tea-2.png"
-import tea3 from "./../../assets/img/tea-3.png"
-import tea4 from "./../../assets/img/tea-4.png"
+import tea1 from "./../../assets/img/tea-1.png";
+import tea2 from "./../../assets/img/tea-2.png";
+import tea3 from "./../../assets/img/tea-3.png";
+import tea4 from "./../../assets/img/tea-4.png";
+import { createRefreshButton } from '../btn/showRefresh';
 import { generateCards } from './itemCards';
 
 const arrTea = [

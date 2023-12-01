@@ -1,4 +1,3 @@
-import { createRefreshButton } from '../btn/refreshProduct';
 import coffee1 from './../../assets/img/coffee-1.png';
 import coffee2 from './../../assets/img/coffee-2.png';
 import coffee3 from './../../assets/img/coffee-3.png';
@@ -7,6 +6,7 @@ import coffee5 from './../../assets/img/coffee-5.png';
 import coffee6 from './../../assets/img/coffee-6.png';
 import coffee7 from './../../assets/img/coffee-7.png';
 import coffee8 from './../../assets/img/coffee-8.png';
+import { createRefreshButton } from '../btn/showRefresh';
 import { generateCards } from './itemCards';
 
 const arrCoffee = [
