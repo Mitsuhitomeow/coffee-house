@@ -1,14 +1,25 @@
-const BTN_REFRESH = document.querySelector('.menu__content-refresh')
+import { generateCards } from "../filterProducts/itemCards";
 
-export function createRefreshButton(count) {
+const BLOCK_BTN_REFRESH = document.querySelector('.menu__content-refresh')
+const BTN_REFRESH = document.querySelector('.menu__refresh-btn')
+
+export const createRefreshButton = (count) => {
 
   function startShow() {
     const SCREEN_WIDTH = window.innerWidth;
 
     count > 4 && SCREEN_WIDTH <= 1425
-      ? BTN_REFRESH.style.display = 'flex'
-      : BTN_REFRESH.style.display = 'none';
+      ? BLOCK_BTN_REFRESH.style.display = 'flex'
+      : BLOCK_BTN_REFRESH.style.display = 'none';
   }
 
-  startShow()
+startShow()
 };
+
+export const btnShowMoreCards = (card, arrCards) => {
+  BTN_REFRESH.addEventListener('click', () => {
+    card.innerHTML = ''
+    arrCards.forEach(element => generateCards(element));
+    document.querySelector('.menu__content-refresh').style.display = 'none';
+  })
+}

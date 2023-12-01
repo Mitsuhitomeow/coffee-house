@@ -5,10 +5,11 @@ import { showLoader } from './scripts/loaderScreen';
 import { btnBurgerMenu } from './scripts/burger/burgerMenuApp';
 
 showLoader();
-
-fetchData();
 btnBurgerMenu();
+fetchData();
 
-window.addEventListener('resize', () => {
-  fetchData();
-})
+
+window.addEventListener('resize', fetchData);
+
+// if (document.querySelector('.menu__content-refresh').style.display === 'none') {
+//   window.removeEventListener('resize', fetchData);

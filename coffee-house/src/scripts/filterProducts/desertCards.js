@@ -6,7 +6,7 @@ import dessert5 from "./../../assets/img/dessert-5.png";
 import dessert6 from "./../../assets/img/dessert-6.png";
 import dessert7 from "./../../assets/img/dessert-7.png";
 import dessert8 from "./../../assets/img/dessert-8.png";
-import { createRefreshButton } from '../btn/showRefresh';
+import { createRefreshButton, btnShowMoreCards } from '../btn/showRefresh';
 import { generateCards } from "./itemCards";
 
 
@@ -38,29 +38,15 @@ export function desertShowCards(data) {
 
   const maxVisibleCards =
     SCREEN_WIDTH <= 1425 && SCREEN_WIDTH >= 1050
-    ? 6
-    : SCREEN_WIDTH < 1050
-    ? 4
-    : dessertCards.length;
+      ? 6
+      : SCREEN_WIDTH < 1050
+        ? 4
+        : dessertCards.length;
 
-    const visibleCards = dessertCards.slice(0, maxVisibleCards);
+  const visibleCards = dessertCards.slice(0, maxVisibleCards);
 
-    visibleCards.forEach(element => generateCards(element));
+  visibleCards.forEach(element => generateCards(element));
 
-    createRefreshButton(count)
-
-
-
-
-    const BTN_REFRESH = document.querySelector('button');
-    BTN_REFRESH.addEventListener('click', () => {
-
-
-      console.log('targetEvent')
-      // if(targetEvent.classList.contains('menu__refresh-btn')) {
-      //   dessertCards.forEach(element => generateCards(element));
-      // } else {
-      //   visibleCards.forEach(element => generateCards(element));
-      // }
-    })
-  }
+  createRefreshButton(count)
+  btnShowMoreCards(card, dessertCards)
+}
