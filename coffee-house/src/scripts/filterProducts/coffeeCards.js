@@ -1,3 +1,4 @@
+import { createRefreshButton } from '../btn/refreshProduct';
 import coffee1 from './../../assets/img/coffee-1.png';
 import coffee2 from './../../assets/img/coffee-2.png';
 import coffee3 from './../../assets/img/coffee-3.png';
@@ -31,19 +32,21 @@ export const coffeeShowCards = (data) => {
   let count = 0;
   for (let i = 0; i < Math.min(arrCoffee.length); i += 1) {
     coffeeCards[i].image = arrCoffee[i]
-    count ++
+    count++
   };
 
-console.log(count)
+
 
   const maxVisibleCards =
-    SCREEN_WIDTH <= 1425 && SCREEN_WIDTH >= 1050
-      ? 6
-      : SCREEN_WIDTH < 1050
-        ? 4
-        : coffeeCards.length;
+  SCREEN_WIDTH <= 1425 && SCREEN_WIDTH >= 1050
+  ? 6
+  : SCREEN_WIDTH < 1050
+  ? 4
+  : coffeeCards.length;
 
   const visibleCards = coffeeCards.slice(0, maxVisibleCards);
 
   visibleCards.forEach(element => generateCards(element));
+
+  createRefreshButton(count)
 }

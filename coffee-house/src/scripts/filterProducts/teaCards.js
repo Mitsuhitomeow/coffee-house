@@ -1,3 +1,4 @@
+import { createRefreshButton } from "../btn/refreshProduct";
 import tea1 from "./../../assets/img/tea-1.png"
 import tea2 from "./../../assets/img/tea-2.png"
 import tea3 from "./../../assets/img/tea-3.png"
@@ -20,10 +21,12 @@ export function teaShowCards(data) {
 
   card.innerHTML = '';
 
+  let count = 0;
+
   for (let i = 0; i < Math.min(arrTea.length); i += 1) {
     teaCards[i].image = arrTea[i]
   };
-  console.log(cardItem)
+
   const maxVisibleCards =
     SCREEN_WIDTH <= 1425 && SCREEN_WIDTH >= 1050
       ? 6
@@ -34,4 +37,6 @@ export function teaShowCards(data) {
   const visibleCards = teaCards.slice(0, maxVisibleCards);
 
   visibleCards.forEach(element => generateCards(element));
+
+  createRefreshButton(count)
 }

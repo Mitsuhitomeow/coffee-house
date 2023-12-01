@@ -6,14 +6,32 @@
 
 
     button {
+      cursor: pointer;
       background: $background-body;
       padding: 17px 16px 14px 18px;
       border-radius: 50%;
       border: 1px solid $text-dark;
-    }
+      transition: all .3s ease;
 
-    @media screen and (max-width:1425px) {
-      display: flex;
+      svg {
+        path {
+          transition: all .3s ease;
+        }
+      }
+    }
+  }
+}
+
+@media (hover:hover) {
+  .menu__content-refresh {
+    button:hover {
+      background: $background-container;
+
+      svg {
+        path {
+          stroke: $text-light;
+        }
+      }
     }
   }
 }

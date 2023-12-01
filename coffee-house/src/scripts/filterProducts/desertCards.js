@@ -1,3 +1,4 @@
+import { createRefreshButton } from "../btn/refreshProduct";
 import dessert1 from "./../../assets/img/dessert-1.png";
 import dessert2 from "./../../assets/img/dessert-2.png";
 import dessert3 from "./../../assets/img/dessert-3.png";
@@ -29,18 +30,37 @@ export function desertShowCards(data) {
 
   card.innerHTML = '';
 
+  let count = 0;
   for (let i = 0; i < Math.min(arrDesert.length); i += 1) {
     dessertCards[i].image = arrDesert[i]
+    count++
   };
 
   const maxVisibleCards =
     SCREEN_WIDTH <= 1425 && SCREEN_WIDTH >= 1050
-      ? 6
-      : SCREEN_WIDTH < 1050
-        ? 4
-        : dessertCards.length;
+    ? 6
+    : SCREEN_WIDTH < 1050
+    ? 4
+    : dessertCards.length;
 
-  const visibleCards = dessertCards.slice(0, maxVisibleCards);
+    const visibleCards = dessertCards.slice(0, maxVisibleCards);
 
-  visibleCards.forEach(element => generateCards(element));
-}
+    visibleCards.forEach(element => generateCards(element));
+
+    createRefreshButton(count)
+
+
+
+
+    const BTN_REFRESH = document.querySelector('button');
+    BTN_REFRESH.addEventListener('click', () => {
+
+
+      console.log('targetEvent')
+      // if(targetEvent.classList.contains('menu__refresh-btn')) {
+      //   dessertCards.forEach(element => generateCards(element));
+      // } else {
+      //   visibleCards.forEach(element => generateCards(element));
+      // }
+    })
+  }
