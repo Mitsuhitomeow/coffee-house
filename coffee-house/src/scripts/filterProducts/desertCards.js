@@ -33,7 +33,7 @@ export function desertShowCards(data) {
   let count = 0;
   for (let i = 0; i < Math.min(arrDesert.length); i += 1) {
     dessertCards[i].image = arrDesert[i]
-    count++
+    count += 1;
   };
 
   const maxVisibleCards =

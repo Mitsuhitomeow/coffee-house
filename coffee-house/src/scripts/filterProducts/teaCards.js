@@ -23,9 +23,9 @@ export function teaShowCards(data) {
 
   let count = 0;
 
-  for (let i = 0; i < Math.min(arrTea.length); i += 1) {
+  for (let i = 0; i < arrTea.length; i += 1) {
     teaCards[i].image = arrTea[i];
-    count += i
+    count += 1
   };
 
   const maxVisibleCards =

@@ -32,7 +32,7 @@ export const coffeeShowCards = (data) => {
   let count = 0;
   for (let i = 0; i < Math.min(arrCoffee.length); i += 1) {
     coffeeCards[i].image = arrCoffee[i]
-    count++
+    count += 1;
   };
 
   const maxVisibleCards =

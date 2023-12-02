@@ -11,6 +11,7 @@ export async function fetchData() {
 
     const data = await response.json()
     filterMenuApp(data)
+    window.addEventListener('resize', filterMenuApp(data));
 
   } catch (error) {
     console.error('failed 404', error.message);
