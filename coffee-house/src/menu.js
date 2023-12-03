@@ -7,3 +7,4 @@ import { btnBurgerMenu } from './scripts/burger/burgerMenuApp';
 showLoader();
 btnBurgerMenu();
 fetchData();
+window.addEventListener('resize', fetchData);
