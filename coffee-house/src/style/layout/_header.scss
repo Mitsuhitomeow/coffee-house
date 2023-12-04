@@ -42,12 +42,12 @@ header {
     transition: transform .5s ease;
   }
 
-  #link-active {
+  .link-active {
     cursor: default;
   }
 
-  #link-active:before {
-    transform: scaleX(1);
+  .link-active:before {
+    transform: scaleX(1.1);
 
     @media screen and (max-width: 768px) {
       transform: scaleX(0);
