@@ -1,11 +1,29 @@
 export const downloadAppStore = () => {
-  document.querySelector('.apple__download-btn').addEventListener('click', function() {
-    window.open('https://www.apple.com/app-store/', '_blank');
-  });
+  const APPLE_BTN = document.querySelector('.apple__download-btn')
+
+  if (APPLE_BTN) {
+    APPLE_BTN.addEventListener('click', (event) => {
+      event.preventDefault()
+
+      const url = 'https://www.apple.com/app-store/';
+      openLink(url);
+    });
+  }
 };
 
 export const downloadGooglePlay = () => {
-  document.querySelector('.google__download-btn').addEventListener('click', function() {
-    window.open('https://play.google.com/store/games?hl=ru&gl=US', '_blank');
-  });
+  const GOOGLE_BTN = document.querySelector('.google__download-btn')
+
+  if (GOOGLE_BTN) {
+    GOOGLE_BTN.addEventListener('click', (event) => {
+      event.preventDefault()
+
+      const url = 'https://play.google.com/store/games?hl=ru&gl=US';
+      openLink(url)
+    })
+  };
 };
+
+function openLink(url) {
+  window.open(url, '_blank', 'noopener noreferrer')
+}
